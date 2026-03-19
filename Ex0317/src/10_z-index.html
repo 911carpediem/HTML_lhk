@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- z-index : 영역 '겹쳐져' 있을 때 보여지는 '순서'에 대한 것 -->
+<html lang="ko">
+
+<head>
+    <style>
+        *{margin:0; padding:0;}
+
+        p{border: 1px solid black;
+          width: 100px;
+          /* 글자를 세로라인에서 가운데로 주려고 'padding'을 줌 */
+          padding: 40px 0;
+          text-align: center;
+          /* position : absolute; 부모의 좌표를 기준으로 0,0지점(브라우저 맨 끝)으로 이동(모임).
+           내 부모 좌표의 0,0으로 가는게 기본!(겹치게됨) */
+          position: absolute;}
+
+          /* 다른 속성과 상관없이 내가 원하는 곳에 '위치 조정' */
+          /*★ z-index : 겹쳐져 있는 요소들의 순서를 변경
+              z-index 값이 클 수록 위에 표시된다 */
+          .box1{ background: yellow; 
+                 left:100px; top:100px;
+                 z-index: 3;} /*겹쳐져있는 순서 중에서도 순서를 바꾸는 것*/
+         /* 왼쪽에서 100px 위에서부터 10px만큼 멀어짐*/
+          .box2{ background: orange;
+                 left:120px; top:120px; 
+                 z-index: 2;}/*숫자가 큰 순으로 z-index가 맨 위로 올라옴*/
+          .box3{ background: teal;
+                 left: 140px; top:140px; }
+    </style>
+</head>
+
+<body>
+    <p class="box1">박스1</p>
+    <p class="box2">박스2</p>
+    <p class="box3">박스3</p>
+</body>
+
+</html>

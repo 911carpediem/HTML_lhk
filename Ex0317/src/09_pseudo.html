@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- pseudo 클래스(순서 클래스) -->
+<html lang="ko">
+
+<head>
+    <style>
+        /* ul안에 li 중 가장 첫번째로 만나는 얘들한테만 속성을 지정할 수 있음 */
+        li:first-child{ color: red; }
+        /* 가장 아래쪽 영역의 li만 속성 지정 */
+        li:last-child{ color:blue;}
+        /* 마치 메서드처럼 ()소괄호가 꼭 들어가 있어야함!! 
+        odd 홀수 번째 위치의 값을 바꾼다*/
+        li:nth-child(odd){ color:pink; }/*홀수*/
+        /* even 짝수 번째 위치의 값을 바꾼다 */
+        li:nth-child(even){ color: green; }/*짝수*/
+        /* '4의 배수'번째 위치의 값(속성)을 바꾼다 */
+        li:nth-child(4n){ background: yellow; }/*4의 배수*/
+        /* 단독으로 내가 원하는 위치(6)에 있는 값(속성)만 바꾼다 */
+        li:nth-child(6){ background: aqua;} /*해당 (숫자) 위치의 값만 변경*/
+
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+        <li>F</li>
+        <li>G</li>
+        <li>H</li>
+    </ul>
+
+     <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ul>
+
+     <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ul>
+</body>
+
+
+</html>

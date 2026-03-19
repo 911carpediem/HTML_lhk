@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 이건 완전 기초라 내걸로 꼭 만들어야함! -->
+<html lang="ko">
+
+<head>
+    <script>
+        //검색코드는 반드시 함수 안에 있어야 함!
+        //함수(function) 밖에서는 getElementById가 작동하지 않음.
+        function send(n) {
+            // 브라우저를 다시 새로 띄움
+            // document.write(n);
+
+            // document.getElementById : p태그임
+            // 2) body에 적은 id값 받음, let라는 자료형으로 p태그 
+            let myp = document.getElementById('myp'); //document 자체가 body라고 생각하면 됨.
+            myp.innerHTML = n; //p태그 열리고 닫힌 저부분 사이가 innerHTML
+        }
+
+        function send2() {
+            let txt = document.getElementById("txt")
+            let myp = document.getElementById("myp")
+            //txt.value = '안녕하세요'; //원래 123을 가지고 있던 value를 안녕하세요로 값 바꿀 때
+            myp.innerHTML = txt.value;
+        }
+
+        function result(){
+            let inp = Number(document.getElementById('input1').value) //input태그 주소 받음, .value가 들어가면 값을 의미하는 걸로 바뀜
+            let res = '';
+            for( let i = 0; i < inp; i++ ){
+                res += "<li>메뉴</li>"
+            }
+
+            let ul = document.getElementById('myul');
+            ul.innerHTML = res;
+        }
+
+    </script>
+</head>
+
+<body>
+    <input type="button" value="버튼1" onclick="send('안녕')" />
+    <!-- id : 특정태그를 식별하는 용도로 쓰이는 경우가 많음 -->
+    <!-- p태그의 존재를 알려주기 위해 id를 사용  -->
+    <!-- 1) head에 id값을 줌 -->
+    <p id="myp">aaa</p>
+
+    <hr />
+
+    <input type="text" size="5" id="txt" value="123" />
+    <input type="button" value="확인" onclick="send2();" />
+    <!-- send2는 text에 입력 -->
+
+    <hr />
+    <!-- 굳이 type을 넣지 않으면 'txet'형태로 만들어짐, 버튼과 같은 것 아니면 type 안넣어도 됨
+     input에 타입으로 텍스트를 주지 않으면 기본으로 text 세팅함 -->
+    <input id="input1" />
+    <input type="button" value="확인" onclick="result()" />
+
+    <ul id="myul"></ul>
+</body>
+
+</html>

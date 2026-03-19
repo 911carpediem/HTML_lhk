@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+    
+    <head>
+        <script>
+            
+        let num = 1;
+        let path = "resources/image/img";
+        
+        function next() {
+            num++;
+            
+            if(num > 7 ){ //이미지 파일 7번까지 있어서 다시 1번으로 초기화
+                num = 1;
+            }
+            
+            document.getElementById('gallery').src = path + num + ".jpg"; //이미지 Tag 그 자체임! .src를 붙이면 이미지 참조 경로가 됨
+        }
+        </script>
+</head>
+
+<body>
+    <!-- 이미지에는 직접적으로 '클릭 이벤트'를 줄 수 없어서 a태그 안에다가 이미지 태그를 담음 -->
+    <a href="#" onclick="prev()">
+        <img src="resources/image/left_btn.png" />
+    </a>
+
+    <img src="resources/image/img1.jpg" width="300" height="200" id="gallery" />
+
+    <a href="#" onclick="next()">
+        <img src="resources/image/right_btn.png" />
+    </a>
+</body>
+
+</html>

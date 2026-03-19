@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang = "ko">
+
+<head>
+    <!-- class는 .으로 접근하는 구조 
+    id는 #으로 접근하는 구조 -->
+    <style>
+        #a1{ color : blue; }
+        #a2{ color : red; }
+        /* 아이디가 a1인 h1태그를 찾으세요. */
+        h1#a1 span.sp{ color:green; }
+    </style>
+</head>
+
+<body>
+    <h1 id="a1">
+        <span class="sp">아이디</span> 연습1</h1>
+        <!-- id는 기본적으로 '절대 중복되게 만들지 않는다'!!(프론트, 백엔드 둘 다 중복 허용X)
+         class는 중복되게 만들 수 있음. -->
+    <h1 id="a2">아이디 연습2</h1>
+    <!-- ★하나의 html페이지에서 id가 중복되는 경우는 없어야 한다 -->
+    <h1 id="a2">아이디 연습2</h1>
+</body>
+
+</html>

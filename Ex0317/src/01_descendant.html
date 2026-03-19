@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- 상속개념 -->
+<html lang="ko">
+
+<head>
+    <title>자손선택자</title>
+
+    <style> /* 한칸 띄워쓰기 (내용을 확실하게 분간하려고) 공백 줌 : '자손 선택자' 일종의 태그*/
+    /* 부모,자식 모두 영향을 줌. (=공백 즉,자손선택자)
+    헤더의 자식 중 h1만을 선택 , 자손(header) 선택자(공백) h1만을 선택 */
+        #header h1{color:red;}
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>자손 선택자</h1>
+        <!-- 부모 'nav' -->
+        <div id="nav"> 
+            <!-- 직계자식 '네비게이션' -->
+            <h1>네비게이션</h1>
+        </div>
+
+        <div id="nav1">
+            <h1>네비게이션</h1>
+        </div>
+    
+    </div>
+</body>
+
+
+</html>

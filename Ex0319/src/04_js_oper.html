@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <!-- 논리연산자 : &&, || -->
+    <script>
+        // prompt : scanner 대신 사용함, 입력 받으면 gender에 값 들어감
+        let gender = prompt( "당신의 성별은?");
+        let age = prompt('당신의 나이는?')
+        // age >= 타입 상관없이 값만 비교함
+        // let res = age >= 20 && age < 30 && gender === '남자';
+
+        // 문자열의 정수 값을 Number(=Integer.path)실제 정수형태로 바꿔서 값을 비교
+        let res = Number(age) >= 20 && age < 30 && gender === '남자';
+        document.write( res );
+        // document.write( age )
+        // 정수구조로 받은 값은(=입력받은 숫자) 숫자를 넣어도 문자열로 저장됨.
+        // document.write( age === 20 );
+</script>
+</head>
+
+<boby>
+
+
+</boby>
+
+
+</html>

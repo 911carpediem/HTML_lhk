@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- alt + shift + 방향키(아래) : 라인 복사 -->
+<html lang="ko">
+
+<head>
+    <style>
+        *{margin:0; padding:0;} /*여백 제거*/
+
+        ul{ width:130px; }
+        /* 부모태그 li임 */
+        li{list-style: none;}/*기존에 가지고 있던 '점 제거'*/
+        /* a태그의 밑줄을 제거, 기본 값은 underline임 */
+        a{ text-decoration:none; /*밑줄 제거*/
+            background: #f30;
+            padding: 5px;
+            display:block;/*li요소에 맞춰 변경된 거라 block을 주면 화면 너비에 딱 맞는 구조가 됨*/
+            margin: 3px 0;/*위 아래 3px 좌우0 살짝 간격줌*/
+            color:#fff; /*글자 색상 변경*/
+            font-weight: bold;}
+        /* :형태 키워드 => 무조건 수도클래스(가상클래스) */
+        /* hover : a태그한테 마우스가 얹어졌을 때만 '감지'할 때 동작(특수한 상태)
+        a태그에 마우스를 얹었을 때 동작하는 css임.(스타일시트) 단, a태그에만 해당되는건 아님! */
+        a:hover{ background: #0c0;
+                 color: #ff0; }
+        /* 클릭시 분홍색으로 변경
+        active는 hover보다 아래쪽에 정의 */
+        a:active{ color:pink;} /*active : 클릭을 감지하는 가상클래스(클릭 했을 때 색상 감지)
+        단, active가 hover 위에 있으면 동작 안함. 아래에 있어야함.(순서 중요!!)*/
+        
+        
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h1>Menu</h1>
+
+        <ul>
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+        </ul>
+
+    </div>
+</body>
+
+</html>

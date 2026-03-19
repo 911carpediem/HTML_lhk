@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <style>
+        p{ width: 100px;
+            padding:10px;
+            background: #69f;}
+        /* 영단어의 경우 공백을 지정해도 잘리는 경우 있어서 너비에 맞춰서 다음으로 넘어가게 설정(한글제외) */
+        .ww{ word-wrap:break-word;}
+    </style>
+
+</head>
+
+<body>
+    <p>
+        이 문장은 매우 긴 단어를 포함하고 있습니다<br/>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </p>
+
+    <p class="ww">
+        <!-- 공백이 없는 영문자  -->
+        이 문장은 매우 긴 단어를 포함하고 있습니다<br/>
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+    </p>
+
+</body>
+
+</html>

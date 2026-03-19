@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <script>
+        function send1() {
+            alert("클릭감지");//경고 메시지 '팝업창'띄워줌
+        }
+        // 함수를 정의할 때는 자료형을 명시하지 않는다.
+        function send2( n ){ //파라미터 받을 때는 자료형 아무것도 쓰지 않음
+            alert(n);
+        }
+    </script>
+</head>
+
+<body>
+    <!-- 메서드: 함수 -->
+    <!-- HTML의 오류는 보통 '브라우저(F12)'에서 확인 -->
+    <input type="button" value="버튼1" onclick="send1();" />
+    <br/>
+    <!-- 10이라는 파라미터 보내기 -->
+    <input type = "button" value="버튼2" onclick="send2(10);"/>
+</body>
+
+</html>

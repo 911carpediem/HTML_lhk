@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #menu {
+            background: #333;
+            overflow: hidden;
+        }
+
+        /* > : 자식 선택자(직계자식 li한테만 적용) */
+        #menu>li {
+            float: left;
+        }
+
+        /* a{ } 이렇게 써도 되지만 누구에게 속해있는지 명확히 작성하는게 좋음 */
+        #menu li a {
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;/*밑줄 제거*/
+            /* a태그를 블록요소로 전환 */
+            display: block;
+        }
+
+        #menu > li > a:hover{ background: #555; }
+        /* .submenu {} */
+        ul.submenu li a:hover{
+            background: #aaf;
+        }
+        /* display : none은 현재 디스플레이를 숨김 */
+        ul.submenu{ position:absolute; 
+                    background: #333;
+                    display: none;} /*display를 안보이게 하는 속성이 'none'*/
+
+        /*마우스 hover시 sbu-menu에 대한 속성 지정 */
+        #menu li:hover ul.submenu{ display: block; }
+        
+    </style> 
+</head>
+
+<body>
+    <ul id="menu">
+        <li>
+            <a href="#">주메뉴1</a>
+            <ul class="submenu">
+                <li><a href="#">하위메뉴1-1</a></li>
+                <li><a href="#">하위메뉴1-2</a></li>
+
+            </ul>
+        </li>
+        
+        <li>
+            <a href="#">주메뉴2</a>
+            <ul class="submenu">
+                <li><a href="#">하위메뉴2-1</a></li>
+                <li><a href="#">하위메뉴2-2</a></li>
+                <li><a href="#">하위메뉴2-3</a></li>
+
+            </ul>
+        </li>
+
+        <li>
+            <a href="#">주메뉴3</a>
+            <ul class="submenu">
+                <li><a href="#">하위메뉴3-1</a></li>
+                <li><a href="#">하위메뉴3-2</a></li>
+                <li><a href="#">하위메뉴3-3</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

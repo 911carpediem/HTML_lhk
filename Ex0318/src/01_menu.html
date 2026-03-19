@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="css/reset.css"/>
+
+    <style>
+        .container{
+            position: relative; /*자식 객체들로 줘서 부모클래스 인식*/
+            width: 280px;
+            margin: 10px auto;
+        }
+
+        .menu{ background: #333;
+               padding: 20px;
+               }
+        
+        .menu ul li{
+            /* 메뉴 만들 때는 왠만하면 'float'써서 정렬하는게 이쁨 */
+            display: inline; /*inline : 옆으로 나열, 가로정렬 */
+            position: relative;
+            margin-right: 20px;
+        }
+
+        .menu ul li a{
+            color:#fff;
+            font-weight: bold;
+        }
+
+        .submenu{
+            position: absolute;
+            left: 0; /*왼쪽으로 완전히 붙여서 표시*/
+            width: 100px;
+            background: #444;
+            display: none;
+        }
+
+        .menu ul li:hover .submenu{ 
+            display: block;
+         }
+
+         .submenu li a{
+            padding: 10px; /*li는 인라인요소여서 padding값 주는게 큰 의미는 없음*/
+            display: block;
+         }
+
+         .submenu li a:hover{
+            background: #555;
+         }
+
+         .menu ul li:first-child{
+            margin-left: 10px;
+         }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li>
+                    <a href="#">서비스</a>
+                    <ul class="submenu">
+                        <li><a href="#">웹개발</a></li>
+                        <li><a href="#">앱개발</a></li>
+                        <li><a href="#">디자인</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">연락처</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

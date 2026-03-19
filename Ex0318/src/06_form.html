@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head></head>
+
+<body>
+    <!-- form태그가 action으로 저장된 파일로 전송 및 이동할 페이지 -->
+    <!-- action: submit을 통해 저장된 파일로 전송 및 이동할 페이지 -->
+    <!-- method="get","post" <-2가지 전송방식 
+     get으로 지정하면 그대로 노출시킴(중요한 정보 넣으면 안됨, 속도빠름) 
+     post로 지정하면 파라미터를 숨겨서 전달(속도느림)
+      -->
+    <!-- action : submit을 통해 지정된 파일로 전송 및 이동할 페이지
+          method : 전송방식을 말하며 get이 공개방식
+    <!-- action : submit을 통해서 전송될 페이지 url임
+        method(전송방식) : get 공개방식, post 비공개
+       -->
+    <form action="test.html" method="get">
+        <p>
+            <!-- input들은 모두 '인라인요소'라 <p>로 포장함 -->
+            입력상자 <input type="text" />
+        </p>
+
+        <p>
+            <!-- 피라미터를 전달할 식별자를 name으로 속성을 줌 -->
+            id <input type="text" size="10" name="myid" />
+            <br />
+            pwd <input type="password" size="10" name="mypwd" />
+        </p>
+
+        <p>
+            메일수신여부<br />
+            <!-- radio타입은 name=value 값을 전송함 -->
+            <input type="radio" value="y" name="receive" />예<br />
+            <input type="radio" value="n" name="receive" />아니오
+        </p>
+
+        <p>
+            파일 <input type="file"/>
+        </p>
+
+        <p>
+            <!-- select는 option이라는 태그가 set로 들어감 
+             <option value="js"뒤에 selected 넣으면 처음 화면 봤을 때 js가 '기본값'으로 나옴-->
+            <select name="subject">
+                <option value="html">HTML5</option>
+                <option value="css">CSS</option>
+                <option value="js">Javascript</option>
+            </select>
+        </p>
+
+        <p>
+            <input type="submit" value="전송" />
+            <input type="reset" value="취소" />
+        </p>
+
+
+    </form>
+</body>
+
+</html>

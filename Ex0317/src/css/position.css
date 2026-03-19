@@ -1,0 +1,22 @@
+#header{ width: 1000px; 
+         height: 80px;
+         border: 1px solid red;
+         margin: 10px auto;  /* 스마일 이미지(빨간테두리), 브라우저 '가운데'로 정렬 (중앙정렬)*/
+         position: relative; } /* position:relative; 이미지가 빨간 네모 안으로 들어옴 */
+p.aa{ position: absolute; left: 0; top: 7px; }
+
+ul{overflow: hidden;}
+li{float: left;}
+
+p{ position: absolute;
+    right: 10px; top: 5px; }
+
+/* a1 : (로그인~학점은행제)윗줄 담당 */
+ul.a1{ position: absolute;
+        left: 350px;
+        top:10px; }
+/* a2 : (웹디자인~단과과정) 두번째 줄 담당, 좌표 이동 */
+ul.a2{ position: absolute;
+        left: 225px;
+        top:40px;}
+

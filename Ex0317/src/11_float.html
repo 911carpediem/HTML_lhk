@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Float: 모양을 조금 더 복잡하게 하기 위해서는 '반드시' 필요함 (정렬하는데 가장 중요한 요소)-->
+<!-- float : left, right 두 종류 밖에 없음 -->
+<html lang="ko">
+
+<head>
+    <style>
+        *{margin:0; padding:0;}
+
+        #header{ margin:10px auto;
+                 width:500px; 
+                 border:5px solid #caa; 
+                background: #fdd;
+                overflow: hidden;}
+
+        h1{ text-align: center; }
+        /* float은 2가지 속성밖에 없음
+        자식 클래스가 float를 가지고 있으면 
+        대부분 부모클래스는 overflow:hidden을 가지고 있어 float을 쓰면 튀어나감
+        공중에 떠버린 자식들을 해제한다는 뜻 */
+        .c1{ width:200px;
+             padding:15px; 
+             background: #dda;
+             float:left;}
+        
+        .c2{ width:200px;
+             padding:15px;
+             background: #ba7;
+             float: right;}
+        /* .c1, .c2가 float을 통해서 '부유(공중에 뜬)'한 형태가 됐다면
+        부모(header)가 자식의 높이를 인식하도록 float의 해제가 필요하다.
+        overflow:hidden으로 float을 해제한다*/
+
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <h1>float 연습</h1>
+
+
+        <div class="c1">
+            내용 left
+        </div>
+
+        <div class="c2">
+            내용 right
+        </div>
+    
+    </div>
+</body>
+
+</html>
